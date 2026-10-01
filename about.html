@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Western Uganda Field</title>
+  <meta name="description" content="About the Western Uganda Field of the Seventh-day Adventist Church, its mission, districts, and ministry focus." />
+  <style>
+    :root {
+      --n900:#071a33; --n800:#0b2545; --n700:#12355f; --n600:#1c4a7e; --n500:#2d6199;
+      --g600:#b8912f; --g500:#c9a227; --g400:#d9b451; --g200:#f0e0b0;
+      --bg:#f5f8fc; --bg2:#eaf0f8; --w:#fff; --ink:#132033; --ink2:#41546e; --ink3:#6b7c93; --line:#dbe4ef;
+      --shadow:0 10px 30px rgba(11,37,69,.08);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+    a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+    .topbar{background:var(--n900);color:#dfeaf7;font-size:12px;letter-spacing:.02em}
+    .topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:38px}
+    .brand-row{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(160deg,#f7f2e3,#e7d9a6 45%,#c49b2c);box-shadow:var(--shadow)}
+    .brand-mark svg{width:32px;height:32px;display:block}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}
+    .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .brand-name{display:flex;flex-direction:column;line-height:1.15}
+    .brand-name strong{font-size:1rem;color:var(--n800)}
+    .brand-name span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+    nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    nav a{font-size:14px;color:var(--ink2);font-weight:600}
+    nav a.active, nav a:hover{color:var(--n800)}
+    .nav-button{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;background:linear-gradient(135deg,var(--g500),var(--g600));color:#1a1204;font-weight:700}
+    .hero{padding:94px 0 42px;background:linear-gradient(160deg,#0a1730,#0d2d4d 55%,#12355f)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+    .hero h1{font-family:Georgia,serif;font-size:clamp(2.3rem,4vw,3.6rem);color:#fff;margin:0 0 16px;line-height:1.1}
+    .hero p{color:#d7e6f8;font-size:1.05rem;margin:0}
+    .pill-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#edf5ff;padding:24px;border-radius:18px;box-shadow:var(--shadow)}
+    .pill-box strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--g200);margin-bottom:10px}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .metric{background:rgba(255,255,255,.05);padding:18px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+    .metric strong{display:block;color:var(--g400);font-size:2rem;line-height:1}
+    .metric span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#cfe0f4}
+    .section{padding:72px 0}
+    .section-head{max-width:700px;margin:0 auto 28px;text-align:center}
+    .section-head .kicker{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--g600);font-weight:700;margin-bottom:12px}
+    h2{font-family:Georgia,serif;font-size:clamp(2rem,3vw,2.8rem);margin:0 0 12px;color:var(--n800)}
+    .lead{color:var(--ink2);font-size:1.05rem;margin:0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:var(--w);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 10px;color:var(--n800);font-size:1.25rem}
+    .card p{margin:0;color:var(--ink2)}
+    .timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:18px}
+    .story{background:linear-gradient(180deg,#fff,#eef4fb);border:1px solid var(--line);border-radius:18px;padding:24px}
+    .story h3{margin:0 0 10px;color:var(--n800)}
+    .story ul{margin:0;padding-left:18px;color:var(--ink2)}
+    .footer{background:var(--n900);color:#bfd0e6;padding:48px 0 18px;margin-top:30px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr .8fr .8fr 1fr;gap:26px}
+    .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .footer small{font-size:12px;color:#9bb2ce;display:block;line-height:1.7}
+    .footer h4{margin:0 0 12px;color:#fff;font-size:1rem}
+    .footer ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:#cfe0f4}
+    .footer a{color:#dfeaf7}
+    .footer-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:18px;margin-top:18px;color:#a7bfd8;font-size:12px}
+    @media (max-width:900px){nav{display:none}.hero-inner,.footer-grid,.grid-3,.timeline{grid-template-columns:1fr}.site-header .wrap{height:72px}} 
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Western Uganda Field | Uganda Union Mission</span>
+      <span>Hoima, Uganda</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="brand" aria-label="Western Uganda Field home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" aria-label="SDA logo"><circle cx="32" cy="32" r="28" fill="#0b2545"/><circle cx="32" cy="32" r="23" fill="#f8f3e3" stroke="#c9a227" stroke-width="2"/><path d="M18 38h28M32 18v28M24 24l16 16M24 40l16-16" stroke="#0b2545" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 47h10v-6H41l-3 3 3 3z" fill="#c9a227"/><path d="M13 47h10v-6H13l-3 3 3 3z" fill="#c9a227"/></svg>
+        </span>
+        <span class="brand-name"><strong>Western Uganda Field</strong><span>Seventh-day Adventist Church</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="departments.html">Departments</a>
+        <a href="churches.html">Churches</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="news.html">News</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="nav-button" href="churches.html">Find a Church</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <span class="kicker" style="color:var(--g200);display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;">About us</span>
+          <h1>Faith, mission, and service across Western Uganda.</h1>
+          <p>Western Uganda Field is a regional administrative unit of the Seventh-day Adventist Church committed to worship, discipleship, church growth, and compassionate outreach across seven districts.</p>
+          <div class="metrics">
+            <div class="metric"><strong>131</strong><span>Churches</span></div>
+            <div class="metric"><strong>32,120</strong><span>Members</span></div>
+            <div class="metric"><strong>7</strong><span>Districts</span></div>
+          </div>
+        </div>
+        <div class="pill-box">
+          <strong>Our Call</strong>
+          <p>To make disciples of Jesus Christ who live as loving witnesses, proclaim the everlasting gospel, and embody the mercy and mission of the church in every community.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Field profile</span>
+          <h2>Serving the people of Western Uganda</h2>
+          <p class="lead">Our work is centered on spiritual nurture, practical service, and partnerships that strengthen local churches and their communities.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Mission</h3>
+            <p>To preach the gospel, disciple believers, and equip members for service throughout the districts under the care of Western Uganda Field.</p>
+          </article>
+          <article class="card">
+            <h3>Vision</h3>
+            <p>Healthy worshiping communities rooted in Christ, marked by prayer, integrity, evangelism, and compassionate outreach.</p>
+          </article>
+          <article class="card">
+            <h3>Coverage</h3>
+            <p>From the headquarters at Kikwite, Hoima, we serve communities in Buliisa, Hoima, Kagadi, Kakumiro, Kibaale, Kiryandongo, and Masindi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#edf4fb;">
+      <div class="wrap">
+        <div class="timeline">
+          <div class="story">
+            <h3>Who we are</h3>
+            <p>Western Uganda Field is part of the Seventh-day Adventist Church in Uganda, organized under the Uganda Union Mission and connected to the broader East-Central Africa Division and world church.</p>
+          </div>
+          <div class="story">
+            <h3>What we do</h3>
+            <ul>
+              <li>Pastoral oversight and support for churches</li>
+              <li>Departmental leadership and ministry coordination</li>
+              <li>Education, health, and community outreach</li>
+              <li>Evangelism and church growth initiatives</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Core values</span>
+          <h2>Grounded in Christ and service</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Worship</h3>
+            <p>We honor God through faithful worship, spiritual nurture, and a reverence for His Word and commandments.</p>
+          </article>
+          <article class="card">
+            <h3>Discipleship</h3>
+            <p>We help members grow in Christ, be rooted in Scripture, and live as witnesses of His love.</p>
+          </article>
+          <article class="card">
+            <h3>Community service</h3>
+            <p>We extend compassion through schools, health initiatives, social care, and service to families and neighbors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" aria-label="SDA logo"><circle cx="32" cy="32" r="28" fill="#0b2545"/><circle cx="32" cy="32" r="23" fill="#f8f3e3" stroke="#c9a227" stroke-width="2"/><path d="M18 38h28M32 18v28M24 24l16 16M24 40l16-16" stroke="#0b2545" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 47h10v-6H41l-3 3 3 3z" fill="#c9a227"/><path d="M13 47h10v-6H13l-3 3 3 3z" fill="#c9a227"/></svg>
+            </span>
+            <div>
+              <strong style="display:block;color:#fff;">Western Uganda Field</strong>
+              <small>Seventh-day Adventist Church</small>
+            </div>
+          </div>
+          <small>An administrative unit of the Seventh-day Adventist Church serving communities across Western Uganda with worship, discipleship, and mission.</small>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="churches.html">Churches</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ministries</h4>
+          <ul>
+            <li><a href="departments.html">Education</a></li>
+            <li><a href="departments.html">Health</a></li>
+            <li><a href="departments.html">Youth</a></li>
+            <li><a href="departments.html">Evangelism</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Field Office</a></li>
+            <li><a href="tel:+2564822161">+256 48 22-161</a></li>
+            <li><a href="mailto:info@westugandafield.org">info@westugandafield.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Western Uganda Field. All rights reserved.</span>
+        <span>Developed by <a href="directory/" target="_blank" rel="noopener">Jonah | Turnels</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
